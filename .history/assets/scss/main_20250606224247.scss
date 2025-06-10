@@ -1,0 +1,44 @@
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+@font-face {
+    font-family: 'font-dana-bold';
+    src: url(../fonts/dana\ bold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-medium';
+    src: url(../fonts/dana\ medium.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-thin';
+    src: url(../fonts/dana\ thin.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-regular';
+    src: url(../fonts/dana\ regular.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-light';
+    src: url(../fonts/dana\ light.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-demi';
+    src: url(../fonts/dana\ demibold.ttf) format("openType");
+}
+.back-color{
+    background-color: #f3f4f6;
+}
+.card-img{
+    border-radius: 10px;
+}
+.card{
+    background-color:#fff;
+    border: none;
+    border-radius: 10px;
+    margin: 1rem;
+}
+.card-body{
+    font-family:'font-dana-regular';
+}

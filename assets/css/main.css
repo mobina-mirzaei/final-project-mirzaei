@@ -1,0 +1,477 @@
+@font-face {
+  font-family: "font-dana-bold";
+  src: url(../fonts/dana/dana\ bold.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-extrabold";
+  src: url(../fonts/dana/dana\ extrabold.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-demi";
+  src: url(../fonts/dana/dana\ demibold.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-medium";
+  src: url(../fonts/dana/dana\ medium.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-regular";
+  src: url(../fonts/dana/dana\ regular.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-thin";
+  src: url(../fonts/dana/dana\ thin.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-light";
+  src: url(../fonts/dana/dana\ light.ttf) format("openType");
+}
+.back-color {
+  background-color: #f3f4f6;
+}
+
+.space-rule {
+  margin-top: 7rem;
+}
+
+.card {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin: 0.8rem;
+}
+.card .card-img {
+  border-radius: 10px;
+}
+.card .card-body .card-title {
+  font-family: "font-dana-demi";
+  font-size: 1rem;
+}
+.card .card-body .card-text {
+  font-family: "font-dana-medium";
+  font-size: 0.9rem;
+  margin-bottom: 4rem;
+  color: #647488;
+}
+.card .card-footer {
+  border: none;
+  padding: 0;
+  background-color: #fff;
+  font-family: "font-dana-medium";
+  font-size: 1rem;
+  color: #647488;
+}
+.card .card-footer a {
+  color: #647488;
+}
+.card .card-footer a:hover {
+  color: #1eb35b;
+}
+.card .card-footer span {
+  color: #f59e0b;
+  font-size: 1rem;
+}
+.card .card-footer .card-price {
+  color: #1eb35b;
+}
+
+.product-style {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin: 0.8rem;
+  min-height: 58vh;
+}
+@media screen and (max-width: 799px) and (max-width: 450px) {
+  .product-style {
+    min-height: 53vh;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+  .product-style {
+    min-height: 40vh;
+  }
+}
+.product-style .product-style-img {
+  border-radius: 10px;
+}
+.product-style .product-style-body .product-style-title {
+  font-family: "font-dana-demi";
+  font-size: 0.9rem;
+}
+.product-style .product-style-body .product-style-text {
+  font-family: "font-dana-medium";
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  color: #647488;
+}
+.product-style .product-style-body .product-style-teacher {
+  font-family: "font-dana-medium";
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.product-style .product-style-body .product-style-price {
+  font-family: "font-dana-medium";
+  color: #1eb35b;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0;
+  font-size: 0.8rem;
+}
+.product-style .product-style-body .product-style-star {
+  font-family: "font-dana-medium";
+  color: #f59e0b;
+  font-size: 0.9rem;
+}
+.product-style .product-style-body .product-style-cart a {
+  font-family: "font-dana-demi";
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: 1px solid #1eb35b;
+  color: #1eb35b;
+  background-color: #fff;
+}
+.product-style .product-style-body .product-style-cart a:hover {
+  background-color: rgba(30, 179, 92, 0.1607843137);
+}
+
+.title-section h3 {
+  font-size: 1rem;
+  font-family: "font-dana-medium";
+  color: #374151;
+}
+.title-section p {
+  font-size: 1.5rem;
+  font-family: "font-dana-bold";
+  color: #111728;
+}
+.title-section a {
+  font-family: "font-dana-medium";
+  color: #374151;
+}
+.title-section a i {
+  font-size: 1rem;
+}
+.title-section a:hover {
+  color: #1eb35b;
+}
+
+.prenav {
+  padding: 1.5rem 0;
+  background-color: #1eb35b;
+}
+.prenav .prenav-text {
+  font-family: "font-dana-demi";
+  padding-top: 2px;
+  color: #FFF;
+  font-size: 1.1rem;
+}
+.prenav .prenav-text i {
+  font-size: 1.3rem;
+}
+.prenav .prenav-btn {
+  font-family: "font-dana-medium";
+  background-color: #fff;
+  color: rgb(30, 179, 91);
+  border-radius: 7px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .prenav .prenav-1 {
+    justify-content: center;
+  }
+}
+
+.back-nav {
+  background-image: url(../images/hero-section.webp);
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+.back-nav .nav-item {
+  list-style-type: none;
+  font-family: "font-dana-demi";
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+.back-nav .nav-item .nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+.back-nav .nav-item .nav-link:hover {
+  color: #fff;
+}
+.back-nav i {
+  font-family: "font-dana-demi";
+  font-size: 1.3rem;
+}
+.back-nav .canvas-li {
+  color: #111827;
+}
+.back-nav .navbar-toggler-icon {
+  background-image: url(../images/download.svg);
+}
+.back-nav .offcanvas-start {
+  width: 250px;
+  font-family: "font-dana-demi";
+}
+.back-nav .offcanvas-start .login-mobile-btn {
+  background-color: rgba(10, 151, 212, 0.1568627451);
+}
+.back-nav .offcanvas-start .login-mobile-btn a {
+  color: #0a97d4;
+  padding: 1rem;
+}
+.back-nav .offcanvas-start .offcanvas-body h6 {
+  color: #1eb35b;
+  font-size: 1.1rem;
+}
+.back-nav .offcanvas-start .offcanvas-body .nav-link {
+  color: #111728;
+  font-family: "font-dana-medium";
+}
+.back-nav .navbar-brand {
+  width: 5vw;
+}
+.back-nav .log-btn {
+  background-color: #1eb35b;
+  color: #fff;
+  border-radius: 7px;
+  padding: 0.3rem 0.9rem;
+}
+.back-nav .log-btn:hover {
+  background-color: #199b4f;
+  color: #fff;
+}
+@media (max-width: 991.98px) {
+  .back-nav .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14vw;
+  }
+  .back-nav .desktop-menu {
+    display: none;
+  }
+}
+.back-nav .text-nav h1 {
+  font-family: "font-dana-extrabold";
+  font-size: 2.5rem;
+}
+.back-nav .text-nav p {
+  font-family: "font-dana-demi";
+  font-size: 1.2rem;
+}
+.back-nav .search-box {
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 10px;
+  margin: 45px auto;
+  border: 1px solid #e0e0e0;
+  width: 55vw;
+}
+.back-nav .search-box input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  font-size: 1rem;
+  padding-right: 15px;
+  font-family: "font-dana-medium";
+  font-size: 1rem;
+}
+.back-nav .search-box .search-icon {
+  background-color: #39d067;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+.back-nav .end-nav {
+  font-family: "font-dana-extrabold";
+}
+.back-nav .end-nav h5 {
+  font-size: 1.9rem;
+}
+.back-nav .end-nav p {
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .back-nav .search-box {
+    width: 90vw;
+  }
+}
+@media (max-width: 1000px) {
+  .back-nav .search-box {
+    width: 87vw;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  font-family: "font-dana-medium";
+}
+.dropdown .dropdown-content .dropdown-item {
+  color: #111728;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown .dropdown-content .dropdown-item:hover {
+  background-color: rgba(10, 151, 212, 0.1019607843);
+  color: #0a97d4;
+}
+
+.dropdown-submenu {
+  position: relative;
+  display: block;
+}
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-submenu:hover .front-style {
+  background-color: rgba(10, 151, 212, 0.1019607843);
+  color: #0a97d4;
+  border-left: 3px solid #0a97d4;
+}
+.dropdown-submenu .dropdown-menu {
+  display: none;
+  position: absolute;
+  margin-right: 10rem;
+  top: 0;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  font-family: "font-dana-medium";
+  overflow-y: scroll;
+  height: 24rem;
+}
+.dropdown-submenu .dropdown-menu .dropdown-item {
+  color: #111728;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-submenu .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(10, 151, 212, 0.1019607843);
+  color: #0a97d4;
+}
+
+.text-plus h4 {
+  font-family: "font-dana-demi";
+}
+.text-plus p {
+  font-family: "font-dana-light";
+}
+.text-plus .btn-plus {
+  font-family: "font-dana-medium";
+  font-size: 0.8rem;
+  border: 1px solid #1eb35b;
+  border-radius: 7px;
+  color: #1eb35b;
+  padding: 10px 15px;
+}
+.text-plus .btn-plus:hover {
+  background-color: rgba(30, 179, 92, 0.1647058824);
+}
+
+.socialmedia-icon {
+  color: #999;
+  font-size: 2rem;
+  margin: 0 5px;
+}
+.socialmedia-icon:hover {
+  color: #0a58ca;
+}
+
+.call-styel {
+  text-decoration: none;
+  color: #374151;
+  font-family: "font-dana-medium";
+  font-size: 1rem;
+}
+
+.footer-style h4 {
+  font-family: "font-dana-bold";
+  font-size: 1.5rem;
+}
+.footer-style p {
+  font-family: "font-dana-medium";
+  font-size: 1rem;
+}
+.footer-style ul {
+  list-style-type: none;
+  padding-right: 0;
+  font-family: "font-dana-medium";
+  font-size: 1rem;
+}
+
+.modal-icon-style {
+  position: sticky;
+  bottom: 1.5rem;
+  z-index: 1;
+}
+.modal-icon-style i {
+  font-size: 2rem;
+}
+@media (max-width: 600px) {
+  .modal-icon-style .modal-btn {
+    margin-right: 20rem;
+  }
+}
+
+.modal-style {
+  height: 35vh;
+  background-color: #0a58ca;
+  color: #fff;
+  font-family: "font-dana-medium";
+}
+.modal-style .i-style-modal {
+  background-color: #fff;
+  color: #0a58ca;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.modal-body {
+  height: 40vh;
+}
+
+.send-box {
+  padding: 2px;
+  width: 55vw;
+}
+.send-box input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  font-size: 1rem;
+  padding-right: 15px;
+  font-family: "font-dana-medium";
+  font-size: 1rem;
+}
+.send-box .send-icon {
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family: 'font-dana-bold';
+    src: url(../fonts/dana\ bold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-demi';
+    src: url(../fonts/dana\ demibold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-medium';
+    src: url(../fonts/dana\ medium.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-regular';
+    src: url(../fonts/dana\ regular.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-thin';
+    src: url(../fonts/dana\ thin.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-light';
+    src: url(../fonts/dana\ light.ttf) format("openType");
+}
+
+.back-color{
+    background-color: #f3f4f6;
+}
+.card{
+    background-color:#fff;
+    border: none;
+    border-radius: 10px;
+    margin: .8rem;
+    .card-img{
+        border-radius: 10px;
+    }
+    .card-body{
+        .card-title{
+            font-family: 'font-dana-demi';
+            font-size: 1rem;
+        }
+        .card-text{
+            font-family:'font-dana-light';
+            font-size: .9rem;
+            margin-bottom: 4rem;
+        }
+    }
+    .card-footer{
+        border: none;
+        padding: 0;
+        background-color: #fff;
+        font-family: 'font-dana-light';
+        font-size:1rem;
+        color: #647488;
+        a{
+        
+        }
+    }
+}
+.title-section{
+    h3{
+        font-size: 1rem;
+        font-family: 'font-dana-medium';
+        color: #374151;
+
+    }
+    p{
+        font-size: 1.5rem;
+        font-family: 'font-dana-bold';
+        color: #111728;
+    }
+    a{
+        font-family: 'font-dana-medium';
+        color: #374151;
+        i{
+            font-size: 1rem;
+        }
+        &:hover{
+            color:#1eb35b ;
+        }
+    }
+}

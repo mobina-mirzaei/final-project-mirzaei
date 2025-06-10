@@ -1,0 +1,180 @@
+
+@font-face {
+    font-family: 'font-dana-bold';
+    src: url(../fonts/dana/dana\ bold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-demi';
+    src: url(../fonts/dana/dana\ demibold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-medium';
+    src: url(../fonts/dana/dana\ medium.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-regular';
+    src: url(../fonts/dana/dana\ regular.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-thin';
+    src: url(../fonts/dana/dana\ thin.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-light';
+    src: url(../fonts/dana/dana\ light.ttf) format("openType");
+}
+
+.back-color{
+    background-color: #f3f4f6;
+}
+.card{
+    background-color:#fff;
+    border: none;
+    border-radius: 10px;
+    margin: .8rem;
+    .card-img{
+        border-radius: 10px;
+    }
+    .card-body{
+        .card-title{
+            font-family: 'font-dana-demi';
+            font-size: 1rem;
+        }
+        .card-text{
+            font-family:'font-dana-medium';
+            font-size: .9rem;
+            margin-bottom: 4rem;
+            color: #647488;
+        }
+    }
+    .card-footer{
+        border: none;
+        padding: 0;
+        background-color: #fff;
+        font-family: 'font-dana-medium';
+        font-size:1rem;
+        color: #647488;
+        a{
+          color: #647488;
+          &:hover{
+            color:#1eb35b ;
+          }
+        }
+        span{
+            color: #f59e0b;
+            font-size: 1rem;
+        }
+        .card-price{
+            color: #1eb35b;
+        }
+
+    }
+}
+.title-section{
+    h3{
+        font-size: 1rem;
+        font-family: 'font-dana-medium';
+        color: #374151;
+
+    }
+    p{
+        font-size: 1.5rem;
+        font-family: 'font-dana-bold';
+        color: #111728;
+    }
+    a{
+        font-family: 'font-dana-medium';
+        color: #374151;
+        i{
+            font-size: 1rem;
+        }
+        &:hover{
+            color:#1eb35b ;
+        }
+    }
+}
+.prenav{
+    padding: 1.5rem 0;
+    background-color: #1eb35b;
+    .prenav-text{
+        font-family: 'font-dana-demi';
+        padding-top: 2px;
+        color: #FFF;
+        font-size: 1.1rem;
+        i{
+            font-size: 1.3rem;
+        }
+    }
+    .prenav-btn{
+        font-family: 'font-dana-medium';
+        background-color: #fff;
+        color:rgb(30 179 91) ;
+        border-radius: 7px;
+        margin-right: 10px;
+    }
+}
+.back-nav{
+    background-image:url(../images/hero-section.webp) ;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    .nav-item{
+        list-style-type: none;
+        font-family: 'font-dana-demi';
+        font-size: 1rem;
+        padding: 0 .5rem;
+        .nav-link{
+        text-decoration: none;
+        color: #fff;
+        
+        &:hover{
+            color: #fff;
+        }
+    }
+    }
+    i{
+        font-family: 'font-dana-demi';
+        font-size: 1.3rem;
+    }
+    .canvas-li{
+        color: #111827;
+    }
+    .navbar-toggler-icon{
+        background-image: url(../images/download.svg);
+    }
+    .offcanvas-start {
+        width: 250px;
+    }
+    .navbar-brand{
+    width: 5vw;
+    }
+    .log-btn{
+        background-color: #1eb35b;
+        color: #fff;
+        border-radius: 7px;
+        padding:.3rem .9rem;
+        &:hover{
+            background-color: #199b4f;
+            color: #fff;
+        }
+    }
+    @media (max-width: 991.98px) {
+        .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 14vw;
+        margin-left: 0;
+        }
+        .desktop-menu {
+            display: none;
+        }
+        .nav-item .nav-link{
+            color: #000;
+        }
+    }
+
+}
