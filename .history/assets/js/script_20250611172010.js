@@ -163,7 +163,7 @@ const render = (list) =>{
             teacherName:'معین باغشیخی',
         },
     ]
-
+    
     const userName = JSON.parse(localStorage.getItem('user'))
     if(userName){
         const userPlaceholder = document.getElementById('user-name');
@@ -180,6 +180,6 @@ const render = (list) =>{
         showConfirmButton: false
         });
     }
-
     render(data);
+    
 })()

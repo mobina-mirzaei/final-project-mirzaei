@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'font-dana-bold';
+    src: url(../fonts/dana/dana\ bold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-extrabold';
+    src: url(../fonts/dana/dana\ extrabold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-demi';
+    src: url(../fonts/dana/dana\ demibold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-medium';
+    src: url(../fonts/dana/dana\ medium.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-regular';
+    src: url(../fonts/dana/dana\ regular.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-thin';
+    src: url(../fonts/dana/dana\ thin.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-light';
+    src: url(../fonts/dana/dana\ light.ttf) format("openType");
+}
+.bg-color{
+    background-color: #f3f4f6;
+}
+.logo-style{
+    margin-bottom: 4rem;
+}
+.form-style{
+    .card{
+    background-color: #fff;
+    border-radius: 10px;
+    .card-body{
+        h5{
+            font-family: 'font-dana-demi';
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+    }
+    input{
+        background-color: #64748b20;
+        margin-bottom: 1rem;
+    }
+    .form-control{
+            background-color:#64748b20;
+        }
+
+     .btn-log-style{
+        background-color:#1eb35b;
+        color: #fff;
+        border-radius: 5px;
+        &:hover{
+            background-color: #1d9d53;
+        }
+     }
+     .text-log{
+        font-family: 'font-dana-medium';
+        font-size: .8rem;
+        color:#64748b ;
+        &:hover{
+            color:#020c1c  ;
+        }
+     }
+    
+}
+.p-log{
+    font-family: 'font-dana-medium';
+}
+
+.modal-icon-style{
+    position: sticky;
+    bottom: 1.5rem;
+    z-index: 1;
+    i{
+        font-size: 2rem;
+    }
+    @media(max-width:600px){
+        .modal-btn{
+            margin-right: 20rem;
+        }
+    }
+}
+.modal-style{
+    height: 35vh;
+    background-color: #0a58ca;
+    color: #fff;
+    font-family: 'font-dana-medium';    
+    .i-style-modal{
+        background-color: #fff;
+        color: #0a58ca;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        padding: .5rem;
+    }
+}
+.modal-body{
+     height: 40vh;
+}
+.send-box{
+    padding:2px;
+    width: 55vw;
+    input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 1rem;
+    padding-right: 15px;
+    font-family:'font-dana-medium';
+    font-size: 1rem;
+    }
+    .send-icon{
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "font-dana-bold";
+  src: url(../fonts/dana/dana\ bold.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-extrabold";
+  src: url(../fonts/dana/dana\ extrabold.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-demi";
+  src: url(../fonts/dana/dana\ demibold.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-medium";
+  src: url(../fonts/dana/dana\ medium.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-regular";
+  src: url(../fonts/dana/dana\ regular.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-thin";
+  src: url(../fonts/dana/dana\ thin.ttf) format("openType");
+}
+@font-face {
+  font-family: "font-dana-light";
+  src: url(../fonts/dana/dana\ light.ttf) format("openType");
+}
+.bg-color {
+  background-color: #f3f4f6;
+}
+
+.logo-style {
+  margin-bottom: 4rem;
+}
+
+.form-style .card {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.form-style .card .card-body h5 {
+  font-family: "font-dana-demi";
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.form-style input {
+  background-color: rgba(100, 116, 139, 0.1254901961);
+  margin-bottom: 1rem;
+}
+.form-style .form-control {
+  background-color: rgba(100, 116, 139, 0.1254901961);
+}
+.form-style .btn-log-style {
+  background-color: #1eb35b;
+  color: #fff;
+  border-radius: 5px;
+}
+.form-style .btn-log-style:hover {
+  background-color: #1d9d53;
+}
+.form-style .text-log {
+  font-family: "font-dana-medium";
+  font-size: 0.8rem;
+  color: #64748b;
+}
+.form-style .text-log:hover {
+  color: #020c1c;
+}
+
+.p-log {
+  font-family: "font-dana-medium";
+}
+
+.modal-icon-style {
+  position: sticky;
+  bottom: 1.5rem;
+  z-index: 1;
+}
+.modal-icon-style i {
+  font-size: 2rem;
+}
+@media (max-width: 600px) {
+  .modal-icon-style .modal-btn {
+    margin-right: 20rem;
+  }
+}
+
+.modal-style {
+  height: 35vh;
+  background-color: #0a58ca;
+  color: #fff;
+  font-family: "font-dana-medium";
+}
+.modal-style .i-style-modal {
+  background-color: #fff;
+  color: #0a58ca;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.modal-body {
+  height: 40vh;
+}
+
+.send-box {
+  padding: 2px;
+  width: 55vw;
+}
+.send-box input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  font-size: 1rem;
+  padding-right: 15px;
+  font-family: "font-dana-medium";
+  font-size: 1rem;
+}
+.send-box .send-icon {
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=login.css.map */

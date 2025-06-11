@@ -180,6 +180,6 @@ const render = (list) =>{
         showConfirmButton: false
         });
     }
-
     render(data);
+    
 })()

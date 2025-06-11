@@ -179,7 +179,13 @@ const render = (list) =>{
         timer: 2000,
         showConfirmButton: false
         });
+        Swal.fire({
+        icon: 'error',
+        title:'خطا !',
+        text: 'اطلاعات نادرست است.',
+        confirmButtonText:'باشه'
+        });
     }
-
     render(data);
+    
 })()
