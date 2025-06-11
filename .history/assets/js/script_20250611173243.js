@@ -175,7 +175,7 @@ const render = (list) =>{
         Swal.fire({
         icon: 'success',
         title: 'به سبزلرن خوش آمدید!',
-        text: 'ورود شما با موفقیت انجام شد.',
+        text: 'ورود شما با موفقیت انجام شد',
         timer: 2000,
         showConfirmButton: false
         });
