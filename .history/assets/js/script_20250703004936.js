@@ -34,6 +34,7 @@ btnPlus.addEventListener('click' ,(e) => {
     }
     isAdd = !isAdd ;
 })
+
 const createProduct = (product) =>{
     const col = document.createElement('div');
     col.classList.add('col-lg-3','col-md-6','col-sm-12','p-0');
@@ -48,7 +49,7 @@ const createProduct = (product) =>{
                 <div class="col-lg-4 d-flex justify-content-end product-style-star"><p>۵.۰<i class='bi bi-star-fill'></i></p></div>
              </div>
              <div class="row d-flex justify-content-between align-items-center border-top mb-1">
-                <div class="col-lg-5 col-md-5 col-4 mt-3"><p class="card-text product-style-price">${product.price}تومان</p></div>
+                <div class="col-lg-5 col-md-5 col-4 mt-3"><p class="card-text product-style-price">${product.price}</p></div>
                 <div class="col-lg-7 col-md-5 col-4 d-flex justify-content-end align-items-center mt-3 product-style-cart">
                 <button class="btn cart-add" data-productid=${product.id}>افزودن به سبد خرید</button>
                 </div>
@@ -58,6 +59,7 @@ const createProduct = (product) =>{
          `
         return col
 }
+
 const render = (list) =>{
     const row = document.getElementById('products');
     list.map(product =>{
@@ -65,6 +67,7 @@ const render = (list) =>{
         row.appendChild(col);
     })
 }
+
 const handleAdd = ( item) =>{
     const cartBtn = document.getElementById('counter');
     
@@ -90,6 +93,7 @@ const handleAdd = ( item) =>{
         localStorage.setItem('cart', JSON.stringify(cart))
     
 }
+
 const handleShowCart = () =>{
     const total = document.getElementById('total');
     const cartModal = document.getElementById('cart-modal');
@@ -105,6 +109,7 @@ const handleShowCart = () =>{
             const ul = document.createElement('ul');
             ul.classList.add('p-1')
 
+            let totalPrice= 0;
             cart.map(cartItem =>{
                 const li = document.createElement('li');
                 li.classList.add('d-flex', 'justify-content-between')
@@ -135,42 +140,27 @@ const handleShowCart = () =>{
                                     </div>
                                     </div>`
                 ul.appendChild(li);
+                totalPrice+= cartItem.price* cartItem.count  
             })
             card.appendChild(ul);
-            cartModal.appendChild(card);  
-    } 
-    setupCartControls();  
-    updateCartTotal();
-}
-
-const updateCartTotal = () =>{
-    const total = document.getElementById('total');
-    if(cart.length === 0){
-        total.innerHTML = '';
-        return;
-    }
-
-    const totalPrice = cart.reduce((sum,item)=> sum+ item.price * item.count , 0)
-    total.innerHTML = `
+            cartModal.appendChild(card);
+            total.innerHTML = `
             <div class="row d-flex justify-content-between">
-            <div class="col-8 text-start"><span>مبلغ قابل پرداخت:${totalPrice.toLocaleString()}تومان </span></div>
+            <div class="col-8 text-start"><span>مبلغ قابل پرداخت:${totalPrice}تومان </span></div>
             <div class="col-4"><button type="button" class="btn btn-success" >پرداخت</button></div>
             </div>
             `
-}
+          
+            const addButtons = document.querySelectorAll('.add-btn');
+            const removeButtons = document.querySelectorAll('.remove-btn');
+            const deleteButtons = document.querySelectorAll('.delete-btn');
 
-const setupCartControls = () =>{
-    const cartBtn = document.getElementById('counter');
-    const addButtons = document.querySelectorAll('.add-btn');
-    const removeButtons = document.querySelectorAll('.remove-btn');
-    const deleteButtons = document.querySelectorAll('.delete-btn');
 
             addButtons.forEach(button =>{
                 button.addEventListener('click', () =>{
                     const index = cart.findIndex(item => item.id === +button.getAttribute('data-id'))
                     cart[index].count++;
                     localStorage.setItem('cart', JSON.stringify(cart))
-                    updateCartTotal();
                     const parent = button.parentElement.parentElement
                     parent.querySelector('.count').innerHTML = cart[index].count;
                     const cardBody = parent.parentElement;
@@ -184,7 +174,6 @@ const setupCartControls = () =>{
                 if(cart[index].count > 1){
                     cart[index].count--;
                     localStorage.setItem('cart', JSON.stringify(cart))
-                    updateCartTotal();
                     const parent = button.parentElement.parentElement
                     parent.querySelector('.count').innerHTML = cart[index].count;
                     const cardBody = parent.parentElement;
@@ -194,8 +183,7 @@ const setupCartControls = () =>{
                     cart = newCart;
                     button.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
                     localStorage.setItem('cart', JSON.stringify(cart))
-                    updateCartTotal();
-                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         ${cart.length}
                         <span class="visually-hidden">unread messages</span>
                       </span>`
@@ -209,15 +197,17 @@ const setupCartControls = () =>{
                     const newCart = cart.filter(item => item.id !== +button.getAttribute('data-id'))
                     cart = newCart;
                     localStorage.setItem('cart', JSON.stringify(cart))
-                    updateCartTotal();
                     button.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
-                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         ${cart.length}
                         <span class="visually-hidden">unread messages</span>
                       </span>`
                     : cartBtn.innerHTML = '<i class="bi bi-handbag"></i>'
                 })
             })
+        
+        
+    }
 }
 
 const handleClearCart = () =>{
@@ -231,6 +221,7 @@ const handleClearCart = () =>{
         cartBtn.innerHTML='<i class="bi bi-handbag"></i>';
         cart = [];
 }
+
 const createEventListeners = () => {
     const addBtn = document.querySelectorAll('.cart-add');
     const cartBtn = document.getElementById('counter');
@@ -247,13 +238,13 @@ const createEventListeners = () => {
 }
 
 (function app(){
-    data = [
+    const data = [
         {
             id:1,
             title:'آموزش پروژه محور Nest.JS از صفر!',
             image:"./assets/images/card4.webp",
             description:'Nest.JS یه فریم ورک توسعه سمت سروز وب با  TypeScript برای ساخت برنامه های مبتنی بر وب است.',
-            price:2800000,
+            price:'۲.۰۸۰.۰۰۰ تومان',
             teacherName:'معین باغشیخی'
         },
         {
@@ -261,7 +252,7 @@ const createEventListeners = () => {
             title:'آموزش جامع توسعه وردپرس',
             image:"./assets/images/card2.webp",
             description:'وردپرس پرکاربرد ترین و محبوب ترین سیستم مدیریت محتوا است که در دنیای طراحی سایت حرف اول را می زدند.',
-            price:2500000,
+            price:'۲.۵۰۰.۰۰۰ تومان',
             teacherName:'امیر طاهرخانی',
         },
         {
@@ -269,7 +260,7 @@ const createEventListeners = () => {
             title:'آموزش جامع دیزاین پترن ها برای برنامه نویسان',
             image:"./assets/images/card3.webp",
             description:'دوره دیزاین پترن به شما کمک می کند کدهای خوانا و مقیاس پذیرتر بنویسید.',
-            price:1200000,
+            price:'۱.۲۰۰.۰۰۰ تومان',
             teacherName:'محمدامین سعیدی راد',
         },
         {
@@ -277,7 +268,7 @@ const createEventListeners = () => {
             title:'Data Visualization با پایتون',
             image:"./assets/images/card1.webp",
             description:'ما تو دنیایی زندگی میکنیم که همه چیز به سمت سریع شدن حرکت میکنه.برای ذهن انسان درک اشکال راحت تراست .',
-            price:800,
+            price:'۸۰۰.۰۰ تومان',
             teacherName:'رضا دولتی',
         },
         {
@@ -285,7 +276,7 @@ const createEventListeners = () => {
             title:'آموزش ساخت ربات تلگرام با پایتون',
             image:"./assets/images/card5.webp",
             description:'آیا تا به حال به این فکر کرده اید ک یک دستیار ربات تلگرامی مخصوص خودتان داشته باشید ؟',
-            price:1600000,
+            price:'۱.۶۰۰.۰۰۰ تومان',
             teacherName:'مهرشاد براتی',
         },
         {
@@ -293,7 +284,7 @@ const createEventListeners = () => {
             title:'آموزش جامع لینوکس برای برنامه نویسان',
             image:"./assets/images/card6.webp",
             description:'اینوکس یک سیسیتم عامل قدرتمند،امن و متن باز است که در سرورها و توسعه نرم افزار کاربرد دارد.',
-            price:1520000,
+            price:'۱.۵۲۰.۰۰۰ تومان',
             teacherName:'مهدی شریفی',
         },
         {
@@ -301,7 +292,7 @@ const createEventListeners = () => {
             title:'بازی سازی تحت وب با JS',
             image:"./assets/images/card7.webp",
             description:'دوره بازی سازی با جاوااسکریپت در سبزلرن بخ شما ساخت بازی های آنلاین را با استفاده از HTML و...آموزش می دهد.',
-            price:1200000,
+            price:'۱.۲۰۰.۰۰۰ تومان',
             teacherName:'مهرشاد براتی',
         },
         {
@@ -309,7 +300,7 @@ const createEventListeners = () => {
             title:'آموزش الگوریتم و ساختمان داده به زبان ساده',
             image:"./assets/images/card8.webp",
             description:' ساختمان داده و الگوریتم،یک مهارت ضروری برای ورود به دنیای برنامه نویسیه که دیگاه شما رو به مسائل عوض میکنه.',
-            price:2400000,
+            price:'۲.۴۰۰.۰۰۰ تومان',
             teacherName:'رضا دولتی',
         },
         {
@@ -317,7 +308,7 @@ const createEventListeners = () => {
             title:'آموزش جامع PHP از صفر',
             image:"./assets/images/card9.webp",
             description:'دوره آموزش php یک برنامه جامع و کاربردیست و برای افرادی طراحی شده که میخواهند مهارتشان را ارتقا دهند.',
-            price:4000000,
+            price:'۴.۰۰۰.۰۰۰ تومان',
             teacherName:'معین باغشیخی',
         },
         {
@@ -325,7 +316,7 @@ const createEventListeners = () => {
             title:'مستر فریلنس',
             image:"./assets/images/card10.webp",
             description:'موفق بودن یک وکیل به تعداد بالای پرونده هاش نیست.بلکه به کیفیت پرونده هاییه که حل کرده.',
-            price:9100000,
+            price:'۹.۱۰۰.۰۰۰ تومان',
             teacherName:'قدیر یلمه',
         },
         {
@@ -333,7 +324,7 @@ const createEventListeners = () => {
             title:'آموزش جاوااسکریپت مقدماتی تا پیشرفته',
             image:"./assets/images/card11.webp",
             description:'آموزش جاوااسکریپت برای تمامی افرادی که قصد ورود به زبان برنامه نویسی دارند مناسب است.',
-            price:3200000,
+            price:'۳.۲۰۰.۰۰۰ تومان',
             teacherName:'محمدامین سعیدی راد',
         },
         {
@@ -341,24 +332,10 @@ const createEventListeners = () => {
             title:'آموزش جامع api نویسی با PHP',
             image:"./assets/images/card12.webp",
             description:'API یکی از پرکاربردنرین اجزای نرم افزاریه که حتما باید بلد باشی ! توی این دوره قراره رو با PHP یاد بگیریم.',
-            price:3200000,
+            price:'۳.۲۰۰.۰۰۰ تومان',
             teacherName:'معین باغشیخی',
         },
     ]
-
-    const cartBtn = document.getElementById('counter');
-    const localCart = JSON.parse(localStorage.getItem('cart'));
-    if(localCart){
-        cart = [...localCart]
-    } else{
-        cart=[];
-    }
-    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-0 translate-middle badge rounded-circle bg-success">
-                        ${cart.length}
-                        <span class="visually-hidden">unread messages</span>
-                      </span>`
-        : cartBtn.innerHTML = '<i class="bi bi-handbag"></i>'
-
 
     const userName = JSON.parse(localStorage.getItem('user'))
     if(userName){
@@ -378,5 +355,4 @@ const createEventListeners = () => {
     }
 
     render(data);
-    createEventListeners()
 })()

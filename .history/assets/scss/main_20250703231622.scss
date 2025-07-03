@@ -465,18 +465,14 @@
         padding: .5rem;
     }
 }
-.chat-modal{
+.modal-body{
     height: 35vh;
 }
 .buy-modal{
-    font-family: 'font-dana-medium';
-    .modal-header{
-        background-color: #0a97d423;
-        color: #0a97d4;
-    }
     .modal-body{
         overflow-y: scroll;
         max-height: 50vh;
+        background-color: #199b4f;
     }
 }
 

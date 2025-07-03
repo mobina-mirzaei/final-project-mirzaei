@@ -195,7 +195,7 @@ const setupCartControls = () =>{
                     button.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
                     localStorage.setItem('cart', JSON.stringify(cart))
                     updateCartTotal();
-                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         ${cart.length}
                         <span class="visually-hidden">unread messages</span>
                       </span>`
@@ -211,7 +211,7 @@ const setupCartControls = () =>{
                     localStorage.setItem('cart', JSON.stringify(cart))
                     updateCartTotal();
                     button.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
-                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         ${cart.length}
                         <span class="visually-hidden">unread messages</span>
                       </span>`

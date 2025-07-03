@@ -34,6 +34,7 @@ btnPlus.addEventListener('click' ,(e) => {
     }
     isAdd = !isAdd ;
 })
+
 const createProduct = (product) =>{
     const col = document.createElement('div');
     col.classList.add('col-lg-3','col-md-6','col-sm-12','p-0');
@@ -58,6 +59,7 @@ const createProduct = (product) =>{
          `
         return col
 }
+
 const render = (list) =>{
     const row = document.getElementById('products');
     list.map(product =>{
@@ -65,6 +67,7 @@ const render = (list) =>{
         row.appendChild(col);
     })
 }
+
 const handleAdd = ( item) =>{
     const cartBtn = document.getElementById('counter');
     
@@ -90,6 +93,7 @@ const handleAdd = ( item) =>{
         localStorage.setItem('cart', JSON.stringify(cart))
     
 }
+
 const handleShowCart = () =>{
     const total = document.getElementById('total');
     const cartModal = document.getElementById('cart-modal');
@@ -105,6 +109,7 @@ const handleShowCart = () =>{
             const ul = document.createElement('ul');
             ul.classList.add('p-1')
 
+            let totalPrice= 0;
             cart.map(cartItem =>{
                 const li = document.createElement('li');
                 li.classList.add('d-flex', 'justify-content-between')
@@ -135,42 +140,27 @@ const handleShowCart = () =>{
                                     </div>
                                     </div>`
                 ul.appendChild(li);
+                totalPrice+= cartItem.price* cartItem.count  
             })
             card.appendChild(ul);
-            cartModal.appendChild(card);  
-    } 
-    setupCartControls();  
-    updateCartTotal();
-}
-
-const updateCartTotal = () =>{
-    const total = document.getElementById('total');
-    if(cart.length === 0){
-        total.innerHTML = '';
-        return;
-    }
-
-    const totalPrice = cart.reduce((sum,item)=> sum+ item.price * item.count , 0)
-    total.innerHTML = `
+            cartModal.appendChild(card);
+            total.innerHTML = `
             <div class="row d-flex justify-content-between">
-            <div class="col-8 text-start"><span>مبلغ قابل پرداخت:${totalPrice.toLocaleString()}تومان </span></div>
+            <div class="col-8 text-start"><span>مبلغ قابل پرداخت:${totalPrice}تومان </span></div>
             <div class="col-4"><button type="button" class="btn btn-success" >پرداخت</button></div>
             </div>
             `
-}
+          
+            const addButtons = document.querySelectorAll('.add-btn');
+            const removeButtons = document.querySelectorAll('.remove-btn');
+            const deleteButtons = document.querySelectorAll('.delete-btn');
 
-const setupCartControls = () =>{
-    const cartBtn = document.getElementById('counter');
-    const addButtons = document.querySelectorAll('.add-btn');
-    const removeButtons = document.querySelectorAll('.remove-btn');
-    const deleteButtons = document.querySelectorAll('.delete-btn');
 
             addButtons.forEach(button =>{
                 button.addEventListener('click', () =>{
                     const index = cart.findIndex(item => item.id === +button.getAttribute('data-id'))
                     cart[index].count++;
                     localStorage.setItem('cart', JSON.stringify(cart))
-                    updateCartTotal();
                     const parent = button.parentElement.parentElement
                     parent.querySelector('.count').innerHTML = cart[index].count;
                     const cardBody = parent.parentElement;
@@ -184,7 +174,6 @@ const setupCartControls = () =>{
                 if(cart[index].count > 1){
                     cart[index].count--;
                     localStorage.setItem('cart', JSON.stringify(cart))
-                    updateCartTotal();
                     const parent = button.parentElement.parentElement
                     parent.querySelector('.count').innerHTML = cart[index].count;
                     const cardBody = parent.parentElement;
@@ -194,8 +183,7 @@ const setupCartControls = () =>{
                     cart = newCart;
                     button.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
                     localStorage.setItem('cart', JSON.stringify(cart))
-                    updateCartTotal();
-                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         ${cart.length}
                         <span class="visually-hidden">unread messages</span>
                       </span>`
@@ -209,15 +197,17 @@ const setupCartControls = () =>{
                     const newCart = cart.filter(item => item.id !== +button.getAttribute('data-id'))
                     cart = newCart;
                     localStorage.setItem('cart', JSON.stringify(cart))
-                    updateCartTotal();
                     button.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
-                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+                    cart.length !== 0 ? cartBtn.innerHTML = `<i class="bi bi-handbag"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         ${cart.length}
                         <span class="visually-hidden">unread messages</span>
                       </span>`
                     : cartBtn.innerHTML = '<i class="bi bi-handbag"></i>'
                 })
             })
+        
+        
+    }
 }
 
 const handleClearCart = () =>{
@@ -231,6 +221,7 @@ const handleClearCart = () =>{
         cartBtn.innerHTML='<i class="bi bi-handbag"></i>';
         cart = [];
 }
+
 const createEventListeners = () => {
     const addBtn = document.querySelectorAll('.cart-add');
     const cartBtn = document.getElementById('counter');

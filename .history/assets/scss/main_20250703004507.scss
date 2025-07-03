@@ -122,7 +122,7 @@
             font-size: .9rem;
         }
         .product-style-cart{
-            .cart-add{
+            a{
                 font-family: 'font-dana-demi';
                 font-size: .8rem;
                 padding: .5rem;
@@ -465,21 +465,10 @@
         padding: .5rem;
     }
 }
-.chat-modal{
-    height: 35vh;
+.modal-body{
+    overflow-y: scroll;
+    max-height: 50vh;
 }
-.buy-modal{
-    font-family: 'font-dana-medium';
-    .modal-header{
-        background-color: #0a97d423;
-        color: #0a97d4;
-    }
-    .modal-body{
-        overflow-y: scroll;
-        max-height: 50vh;
-    }
-}
-
 .cart-modal{
     border-bottom: 1px solid gray;
     border-radius: 0;

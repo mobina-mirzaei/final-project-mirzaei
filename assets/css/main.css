@@ -123,7 +123,7 @@
   color: #f59e0b;
   font-size: 0.9rem;
 }
-.product-style .product-style-body .product-style-cart a {
+.product-style .product-style-body .product-style-cart .cart-add {
   font-family: "font-dana-demi";
   font-size: 0.8rem;
   padding: 0.5rem;
@@ -132,7 +132,7 @@
   color: #1eb35b;
   background-color: #fff;
 }
-.product-style .product-style-body .product-style-cart a:hover {
+.product-style .product-style-body .product-style-cart .cart-add:hover {
   background-color: rgba(30, 179, 92, 0.1607843137);
 }
 
@@ -452,8 +452,25 @@
   padding: 0.5rem;
 }
 
-.modal-body {
-  height: 40vh;
+.chat-modal {
+  height: 35vh;
+}
+
+.buy-modal {
+  font-family: "font-dana-medium";
+}
+.buy-modal .modal-header {
+  background-color: rgba(10, 151, 212, 0.137254902);
+  color: #0a97d4;
+}
+.buy-modal .modal-body {
+  overflow-y: scroll;
+  max-height: 50vh;
+}
+
+.cart-modal {
+  border-bottom: 1px solid gray;
+  border-radius: 0;
 }
 
 .send-box {
