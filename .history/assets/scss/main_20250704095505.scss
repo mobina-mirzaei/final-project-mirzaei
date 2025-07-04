@@ -372,9 +372,9 @@
     .btn-plus{
         font-family:'font-dana-medium';
         font-size: .8rem;
-        border: 1px solid $light-success;
+        border: 1px solid #1eb35b;
         border-radius: 7px;
-        color: $light-success;
+        color: #1eb35b;
         padding:10px 15px;
         &:hover{
             background-color: #1eb35c2a;
@@ -386,12 +386,12 @@
     font-size: 2rem;
     margin: 0 5px;
     &:hover{
-        color:$primary;
+        color: #0a58ca;
     }
 }
 .call-styel{
     text-decoration: none;
-    color: $secondary;
+    color: #374151;
     font-family:'font-dana-medium';
     font-size: 1rem;
 }
@@ -426,12 +426,12 @@
 }
 .modal-style{
     height: 35vh;
-    background-color:$primary;
-    color:$white;
+    background-color: #0a58ca;
+    color: #fff;
     font-family: 'font-dana-medium';    
     .i-style-modal{
-        background-color:$white;
-        color:$primary;
+        background-color: #fff;
+        color: #0a58ca;
         font-size: 1.5rem;
         border-radius: 50%;
         padding: .5rem;
@@ -444,7 +444,7 @@
     font-family: 'font-dana-medium';
     .modal-header{
         background-color: #0a97d423;
-        color:$light-primary;
+        color: #0a97d4;
     }
     .modal-body{
         overflow-y: scroll;

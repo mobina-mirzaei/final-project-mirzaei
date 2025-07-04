@@ -1,67 +1,39 @@
-@import "colors";
-@import "fonts";
+@font-face {
+    font-family: 'font-dana-bold';
+    src: url(../fonts/dana/dana\ bold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-extrabold';
+    src: url(../fonts/dana/dana\ extrabold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-demi';
+    src: url(../fonts/dana/dana\ demibold.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-medium';
+    src: url(../fonts/dana/dana\ medium.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-regular';
+    src: url(../fonts/dana/dana\ regular.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-thin';
+    src: url(../fonts/dana/dana\ thin.ttf) format("openType");
+}
+@font-face {
+    font-family: 'font-dana-light';
+    src: url(../fonts/dana/dana\ light.ttf) format("openType");
+}
 
 .back-color{
     background-color: #f3f4f6;
 }
-.space-rule{
-    margin-top: 7rem;
-}
-.title-section{
-    h3{
-        font-size: 1rem;
-        font-family: 'font-dana-medium';
-        color: $secondary;
-
-    }
-    p{
-        font-size: 1.5rem;
-        font-family: 'font-dana-bold';
-        color: #111728;
-    }
-    a{
-        font-family: 'font-dana-medium';
-        color: $secondary;
-        i{
-            font-size: 1rem;
-        }
-        &:hover{
-            color:$light-success;
-        }
-    }
-}
-// .prenav{
-//     padding: 1.5rem 0;
-//     background-color: #1eb35b;
-//     .prenav-text{
-//         font-family: 'font-dana-demi';
-//         padding-top: 2px;
-//         color: #FFF;
-//         font-size: 1.1rem;
-//         i{
-//             font-size: 1.3rem;
-//         }
-//     }
-//     .prenav-btn{
-//         font-family: 'font-dana-medium';
-//         background-color: #fff;
-//         color:rgb(30 179 91) ;
-//         border-radius: 7px;
-//         margin-right: 10px;
-//     }
-//     @media (max-width:1000px) {
-//         .prenav-1{
-//             justify-content: center;
-//         }
-//     }
-// }
 .back-nav{
-    background-image:url(../images/hero-section.webp) ;
+    background-color: #fff;
     display: flex;
-    background-size: cover;
-    background-position: center;
     align-items: center;
-    background-repeat: no-repeat;
     min-height: 100%;
     .nav-item{
         list-style-type: none;
@@ -70,10 +42,10 @@
         padding: 0 .5rem;
         .nav-link{
         text-decoration: none;
-        color:$white;
+        color: #000;
         
         &:hover{
-            color:$white;
+            color: #000;
         }
     }
     }
@@ -85,7 +57,7 @@
         color: #111827;
     }
     .navbar-toggler-icon{
-        background-image: url(../images/download.svg);
+        background-image: url(../images/download1.png);
     }
     .offcanvas-start {
         width: 250px;
@@ -101,7 +73,6 @@
             h6{
                 color: #1eb35b;
                 font-size: 1.1rem;
-                // font-family: 'font-dana-demi';
             }
             .nav-link{
                 color: #111728;
@@ -143,50 +114,6 @@
             font-size: 1.2rem;
         }
     }
-    .search-box {
-      background-color: #fff;
-      border-radius: 100px;
-      padding:10px;
-      margin: 45px auto;
-      border: 1px solid #e0e0e0;
-      width: 55vw;
-      input {
-        border: none;
-        outline: none;
-        background: none;
-        width: 100%;
-        font-size: 1rem;
-        padding-right: 15px;
-        font-family:'font-dana-medium';
-        font-size: 1rem;
-        }
-        .search-icon {
-            background-color: #39d067;
-            color:#fff;
-            border-radius: 50%;
-            font-size: 1.2rem;
-        }
-    } 
-    .end-nav{
-        font-family: 'font-dana-extrabold';
-        h5{
-            font-size: 1.9rem;
-        }
-        p{
-            font-size: 1rem;
-        }
-    }
-    @media (max-width:600px) {
-        .search-box{
-            width: 90vw;
-        }
-    }
-    @media (max-width:1000px) {
-        .search-box{
-            width: 87vw;
-        }
-    }
-
 }
 .dropdown {
   position: relative;
@@ -213,7 +140,7 @@
     &:hover{
         // background-color:#0885ba34;
         background-color: #0a97d41a;
-        color:$light-primary;
+        color:#0a97d4;
     }
     }
 }
@@ -228,8 +155,8 @@
     }
     .front-style{
       background-color: #0a97d41a;
-      color:$light-primary;
-      border-left: 3px solid $light-primary;
+      color:#0a97d4;
+      border-left: 3px solid #0a97d4;
 
     }
   }
@@ -252,14 +179,33 @@
     text-decoration: none;
     display: block;
     &:hover{
+        // background-color:#0885ba34;
         background-color: #0a97d41a;
-        color:$light-primary;
+        color:#0a97d4;
     }
     }
 }
+}
+.title-section{
+    h3{
+        font-size: 1.5rem;
+        font-family: 'font-dana-bold';
+        color: #374151;
+
+    }
+    a{
+        font-family: 'font-dana-medium';
+        color: #525d6e;
+        i{
+            font-size: 1.3rem;
+        }
+        &:hover{
+            color:#1eb35b ;
+        }
+    }
 }
 .card{
-    background-color:$white;
+    background-color:#fff;
     border: none;
     border-radius: 10px;
     margin: .8rem;
@@ -275,34 +221,34 @@
             font-family:'font-dana-medium';
             font-size: .9rem;
             margin-bottom: 4rem;
-            color: $light-secondary;
+            color: #647488;
         }
     }
     .card-footer{
         border: none;
         padding: 0;
-        background-color:$white;
+        background-color: #fff;
         font-family: 'font-dana-medium';
         font-size:1rem;
-        color:$light-secondary;
+        color: #647488;
         a{
-          color:$light-secondary;
+          color: #647488;
           &:hover{
-            color:$light-success ;
+            color:#1eb35b ;
           }
         }
         span{
-            color:$gold;
+            color: #f59e0b;
             font-size: 1rem;
         }
         .card-price{
-            color:$light-success;
+            color: #1eb35b;
         }
 
     }
 }
 .product-style{
-    background-color:$white;
+    background-color:#fff;
     border: none;
     border-radius: 10px;
     margin: .8rem;
@@ -325,7 +271,7 @@
             font-family:'font-dana-medium';
             font-size: .9rem;
             margin-bottom: 2rem;
-            color:$light-secondary;
+            color: #647488;
         }
         .product-style-teacher{
             font-family: 'font-dana-medium';
@@ -334,15 +280,15 @@
         }
         .product-style-price{
             font-family: 'font-dana-medium';
-            color:$light-success;
+            color: #1eb35b;
             margin-bottom: 1rem;
             margin-top: .5rem;
             padding:.2rem 0;
-            font-size: .8rem;
+            font-size: .9rem;
         }
         .product-style-star{
             font-family: 'font-dana-medium';
-            color:$gold;
+            color: #f59e0b;
             font-size: .9rem;
         }
         .product-style-cart{
@@ -351,9 +297,9 @@
                 font-size: .8rem;
                 padding: .5rem;
                 border-radius: 7px;
-                border: 1px solid$light-success;
-                color:$light-success;
-                background-color:$white;
+                border: 1px solid #1eb35b;
+                color: #1eb35b;
+                background-color: #fff;
                 &:hover{
                     background-color: #1eb35c29;
                 }
@@ -362,23 +308,61 @@
         }
     }
 }
-.text-plus{
-    h4{
-        font-family:'font-dana-demi';
+.modal-icon-style{
+    position: sticky;
+    bottom: 1.5rem;
+    z-index: 1;
+    i{
+        font-size: 2rem;
     }
-    p{
-        font-family:'font-dana-light';
-    }
-    .btn-plus{
-        font-family:'font-dana-medium';
-        font-size: .8rem;
-        border: 1px solid $light-success;
-        border-radius: 7px;
-        color: $light-success;
-        padding:10px 15px;
-        &:hover{
-            background-color: #1eb35c2a;
+    @media(max-width:600px){
+        .modal-btn{
+            margin-right: 20rem;
         }
+    }
+}
+.modal-style{
+    height: 35vh;
+    background-color: #0a58ca;
+    color: #fff;
+    font-family: 'font-dana-medium';    
+    .i-style-modal{
+        background-color: #fff;
+        color: #0a58ca;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        padding: .5rem;
+    }
+}
+.chat-modal{
+    height: 35vh;
+}
+.send-box{
+    padding:2px;
+    width: 55vw;
+    input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 1rem;
+    padding-right: 15px;
+    font-family:'font-dana-medium';
+    font-size: 1rem;
+    }
+    .send-icon{
+        font-size: 1.2rem;
+    }
+}
+.buy-modal{
+    font-family: 'font-dana-medium';
+    .modal-header{
+        background-color: #0a97d423;
+        color: #0a97d4;
+    }
+    .modal-body{
+        overflow-y: scroll;
+        max-height: 50vh;
     }
 }
 .socialmedia-icon{
@@ -386,12 +370,12 @@
     font-size: 2rem;
     margin: 0 5px;
     &:hover{
-        color:$primary;
+        color: #0a58ca;
     }
 }
 .call-styel{
     text-decoration: none;
-    color: $secondary;
+    color: #374151;
     font-family:'font-dana-medium';
     font-size: 1rem;
 }
@@ -411,64 +395,15 @@
     font-size: 1rem;
     }
 }
-.modal-icon-style{
-    position: sticky;
-    bottom: 1.5rem;
-    z-index: 1;
-    i{
-        font-size: 2rem;
-    }
-    @media(max-width:600px){
-        .modal-btn{
-            margin-right: 20rem;
-        }
-    }
-}
-.modal-style{
-    height: 35vh;
-    background-color:$primary;
-    color:$white;
-    font-family: 'font-dana-medium';    
-    .i-style-modal{
-        background-color:$white;
-        color:$primary;
-        font-size: 1.5rem;
-        border-radius: 50%;
-        padding: .5rem;
-    }
-}
-.chat-modal{
-    height: 35vh;
-}
-.buy-modal{
+.clear-box{
+    background-color: #fff;
+    border-radius: 7px; 
     font-family: 'font-dana-medium';
-    .modal-header{
-        background-color: #0a97d423;
-        color:$light-primary;
+    p{
+       font-size: 1.2rem;
     }
-    .modal-body{
-        overflow-y: scroll;
-        max-height: 50vh;
-    }
-}
-.cart-modal{
-    border-bottom: 1px solid gray;
-    border-radius: 0;
-}
-.send-box{
-    padding:2px;
-    width: 55vw;
-    input {
-    border: none;
-    outline: none;
-    background: none;
-    width: 100%;
-    font-size: 1rem;
-    padding-right: 15px;
-    font-family:'font-dana-medium';
-    font-size: 1rem;
-    }
-    .send-icon{
-        font-size: 1.2rem;
+    span{
+        font-size: .9rem;
+        color: #1eb35b;
     }
 }

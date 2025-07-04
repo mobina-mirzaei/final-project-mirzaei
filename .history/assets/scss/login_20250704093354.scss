@@ -1,6 +1,3 @@
-@import "colors";
-@import "fonts";
-
 .bg-color{
     background-color: #f3f4f6;
 }
@@ -9,7 +6,7 @@
 }
 .form-style{
     .card{
-    background-color:$white;
+    background-color: #fff;
     border-radius: 10px;
     .card-body{
         h5{
@@ -28,8 +25,8 @@
         }
 
      .btn-log-style{
-        background-color:$light-success;
-        color:$white;
+        background-color:#1eb35b;
+        color: #fff;
         border-radius: 5px;
         &:hover{
             background-color: #1d9d53;
@@ -63,12 +60,12 @@
 }
 .modal-style{
     height: 35vh;
-    background-color:$primary;
-    color:$white;
+    background-color: #0a58ca;
+    color: #fff;
     font-family: 'font-dana-medium';    
     .i-style-modal{
-        background-color:$white;
-        color:$primary;
+        background-color: #fff;
+        color: #0a58ca;
         font-size: 1.5rem;
         border-radius: 50%;
         padding: .5rem;
